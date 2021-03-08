@@ -87,101 +87,13 @@ info.setLife(5)
 controller.moveSprite(fighter, 100, 0)
 fighter.setPosition(80, 111)
 info.startCountdown(60)
-game.onUpdateInterval(1800, function () {
+game.onUpdateInterval(200, function () {
     projectile = sprites.createProjectileFromSprite(img`
         . . 5 . . 
-        . 2 2 2 . 
-        5 2 4 2 5 
-        . 2 2 2 . 
+        . 8 4 2 . 
+        f 4 5 4 f 
+        . 2 4 8 . 
         . . 5 . . 
-        `, snake, 0, -50)
-    projectile.setKind(SpriteKind.SnakeBullet)
-    projectile = sprites.createProjectileFromSprite(img`
-        . . f . . 
-        . 2 f 5 . 
-        f f f f f 
-        . 5 f 2 . 
-        . . f . . 
-        `, snake, 30, -40)
-    projectile.setKind(SpriteKind.SnakeBullet)
-    projectile = sprites.createProjectileFromSprite(img`
-        . . 9 . . 
-        . 9 4 9 . 
-        9 4 5 4 9 
-        . 9 4 9 . 
-        . . 9 . . 
-        `, snake, 45, -20)
-    projectile.setKind(SpriteKind.SnakeBullet)
-    projectile = sprites.createProjectileFromSprite(img`
-        . . 4 . . 
-        . 3 2 3 . 
-        4 8 8 8 4 
-        . 3 2 3 . 
-        . . 4 . . 
-        `, snake, 50, 0)
-    projectile.setKind(SpriteKind.SnakeBullet)
-    projectile = sprites.createProjectileFromSprite(img`
-        . . 5 . . 
-        . e 5 e . 
-        5 5 2 5 5 
-        . e 5 e . 
-        . . 5 . . 
-        `, snake, 45, 20)
-    projectile.setKind(SpriteKind.SnakeBullet)
-    projectile = sprites.createProjectileFromSprite(img`
-        . . 8 . . 
-        . 5 2 5 . 
-        8 4 8 4 8 
-        . 5 2 5 . 
-        . . 8 . . 
-        `, snake, 30, 40)
-    projectile.setKind(SpriteKind.SnakeBullet)
-    projectile = sprites.createProjectileFromSprite(img`
-        . . 3 . . 
-        . 3 5 3 . 
-        3 8 3 8 3 
-        . 3 5 3 . 
-        . . 3 . . 
-        `, snake, 0, 50)
-    projectile.setKind(SpriteKind.SnakeBullet)
-    projectile = sprites.createProjectileFromSprite(img`
-        . . 2 . . 
-        . 4 4 4 . 
-        5 4 8 4 5 
-        . 4 4 4 . 
-        . . 2 . . 
-        `, snake, -30, 40)
-    projectile.setKind(SpriteKind.SnakeBullet)
-    projectile = sprites.createProjectileFromSprite(img`
-        . . a . . 
-        . a a a . 
-        a a 2 a a 
-        . a a a . 
-        . . a . . 
-        `, snake, -45, 20)
-    projectile.setKind(SpriteKind.SnakeBullet)
-    projectile = sprites.createProjectileFromSprite(img`
-        . . 9 . . 
-        . e a e . 
-        9 3 4 3 9 
-        . e a e . 
-        . . 9 . . 
-        `, snake, -50, 0)
-    projectile.setKind(SpriteKind.SnakeBullet)
-    projectile = sprites.createProjectileFromSprite(img`
-        . . c . . 
-        . a 4 2 . 
-        9 e 5 1 d 
-        . 2 3 a . 
-        . . f . . 
-        `, snake, -45, -20)
-    projectile.setKind(SpriteKind.SnakeBullet)
-    projectile = sprites.createProjectileFromSprite(img`
-        . . c . . 
-        . c 5 e . 
-        c 1 f 1 c 
-        . e 5 c . 
-        . . c . . 
-        `, snake, -30, -40)
+        `, snake, randint(-100, 100), 100)
     projectile.setKind(SpriteKind.SnakeBullet)
 })
